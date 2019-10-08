@@ -1,0 +1,20 @@
+{{define "content"}}
+    <table border="1">
+        <tr>
+            <td>Email</td>
+            <td>{{.Email}}</td>
+        </tr>
+        <tr>
+            <td>Roles</td>
+            <td>{{template "role_list" .}}</td>
+        </tr>
+    </table>
+{{end}}
+
+{{define "role_list"}}
+    <ul>
+    {{range .Roles}}
+        <li>{{.}}</li>
+    {{end}}
+    </ul>
+{{end}}
